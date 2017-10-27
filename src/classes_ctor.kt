@@ -1,13 +1,12 @@
-
 // primary constructor, creates one variable property
 // var - variable, val - constant
-class User1(var name : String)
+class User1(var name: String)
 
 // primary constructor with explicit constructor keyword
-class User2 constructor(val name : String, var id : Int = -1)
+class User2 constructor(val name: String, var id: Int = -1)
 
 // primary constructor with explicit constructor keyword
-class User3(_name : String) {
+class User3(_name: String) {
     var name = _name
 }
 
@@ -19,6 +18,7 @@ class User5(_name: String) {
     init {
         name = _name
     }
+
     init {
         this.name2 = _name
     }
@@ -27,7 +27,7 @@ class User5(_name: String) {
 open class BaseUser
 
 // primary constructor with call to base class constructor
-open class User(var name : String) : BaseUser()
+open class User(var name: String) : BaseUser()
 
 // primary constructor with call to base class constructor
 class SuperUser(name: String) : User(name)

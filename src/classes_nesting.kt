@@ -1,4 +1,3 @@
-
 class Outer {
     // Do not contain reference to Outer, like static class in Java
     class Nested {

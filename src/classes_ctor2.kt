@@ -1,4 +1,3 @@
-
 // no primary constructor, two secondary constructors
 open class Player {
     constructor(name: String) {
@@ -10,13 +9,11 @@ open class Player {
 
 class SuperPlayer : Player {
     constructor(id: Int, name: String)
-        : super(id, name)
-    {
+            : super(id, name) {
     }
 
     constructor(name: String)
-        : this(-1, name)
-    {
+            : this(-1, name) {
     }
 }
 

@@ -1,4 +1,3 @@
-
 // accessing backing field from its accessors
 class NameAddress(val name: String) {
     var address: String = "unspecified"
@@ -9,12 +8,11 @@ class NameAddress(val name: String) {
         }
 
     var street: String = "unknown"
-        // limiting accessor visibility, cannot be used outsize of class
+            // limiting accessor visibility, cannot be used outsize of class
         private set
 }
 
-fun main(args: Array<String>)
-{
+fun main(args: Array<String>) {
     var v = NameAddress("abd")
     v.address = "new"
 

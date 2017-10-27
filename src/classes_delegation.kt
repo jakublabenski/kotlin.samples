@@ -1,6 +1,5 @@
-
 // Collection delegation
-class MyString(private val inner : Collection<String> = ArrayList<String>())
+class MyString(private val inner: Collection<String> = ArrayList<String>())
     : Collection<String> by inner {
 
     override fun contains(element: String): Boolean {
@@ -9,7 +8,7 @@ class MyString(private val inner : Collection<String> = ArrayList<String>())
     }
 }
 
-fun f(coll : Collection<String>) {
+fun f(coll: Collection<String>) {
     val m = MyString(coll)
 
     m.isEmpty()
