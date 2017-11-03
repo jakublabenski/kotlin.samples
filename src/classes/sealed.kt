@@ -1,3 +1,5 @@
+package classes
+
 // abstract by default, constructors are private by default
 // non-private constructors are not allowed
 sealed class Expr {
@@ -9,9 +11,9 @@ sealed class Expr {
 // not only in sealed class itself
 class Sub : Expr()
 
-//class Mult: Expr()
+//class Mult: classes.Expr()
 
-// when must use all Expr subclasses, or 'else' clause
+// when must use all classes.Expr subclasses, or 'else' clause
 fun exal(e: Expr) = when (e) {
     is Expr.Val -> 1
     is Expr.Sum -> 2

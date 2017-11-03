@@ -1,5 +1,7 @@
+package classes
+
 class Outer {
-    // Do not contain reference to Outer, like static class in Java
+    // Do not contain reference to classes.Outer, like static class in Java
     class Nested {
     }
 

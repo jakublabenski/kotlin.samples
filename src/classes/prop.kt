@@ -1,3 +1,5 @@
+package classes
+
 // interface with property declaration
 interface WithName {
     var name: String

@@ -1,3 +1,5 @@
+package classes
+
 interface Clickable {
     fun click()
     fun showOff() = println("I'm clickable!")
@@ -22,9 +24,9 @@ abstract class AbstractButton : Clickable, Focusable {
 
 }
 
-// open to allow RadioButton inheritance
+// open to allow classes.RadioButton inheritance
 open class Button : AbstractButton() {
-    override fun click() = println("Button was clicked")
+    override fun click() = println("classes.Button was clicked")
 
     override fun reset() {}
 
@@ -33,17 +35,17 @@ open class Button : AbstractButton() {
     }
 }
 
-// open to allow SubButton inheritance
+// open to allow classes.SubButton inheritance
 open class RadioButton : Button() {
-    final override fun click() = println("RadioButton was clicked")
+    final override fun click() = println("classes.RadioButton was clicked")
 
     override fun toggle() {
     }
 }
 
 class SubButton : RadioButton() {
-    // disallowed, final in RadioButton:
-    // override fun click() = println("Button was clicked")
+    // disallowed, final in classes.RadioButton:
+    // override fun click() = println("classes.Button was clicked")
 
-    override fun showOff() = println("SubButton is clickable!")
+    override fun showOff() = println("classes.SubButton is clickable!")
 }

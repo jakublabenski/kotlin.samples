@@ -1,3 +1,5 @@
+package classes
+
 // primary constructor, creates one variable property
 // var - variable, val - constant
 class User1(var name: String)
@@ -26,10 +28,10 @@ class User5(_name: String) {
 
 open class BaseUser
 
-// primary constructor with call to base class constructor
+// primary constructor with classes.call to base class constructor
 open class User(var name: String) : BaseUser()
 
-// primary constructor with call to base class constructor
+// primary constructor with classes.call to base class constructor
 class SuperUser(name: String) : User(name)
 
 // private primary constructor

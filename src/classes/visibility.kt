@@ -1,3 +1,5 @@
+package classes
+
 // public by default, visible everywhere
 class PublicByDefault {}
 

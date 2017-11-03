@@ -1,3 +1,5 @@
+package classes
+
 // accessing backing field from its accessors
 class NameAddress(val name: String) {
     var address: String = "unspecified"

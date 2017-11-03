@@ -1,3 +1,5 @@
+package classes
+
 // Collection delegation
 class MyString(private val inner: Collection<String> = ArrayList<String>())
     : Collection<String> by inner {

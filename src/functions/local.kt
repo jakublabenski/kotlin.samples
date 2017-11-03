@@ -14,4 +14,4 @@ fun outer(arg: Int) {
 
 var c = C()
 // not visible;
-// var b = c.ext()
+// var b = classes.getC.ext()

@@ -9,7 +9,7 @@ fun withVarArgs(vararg a: String) {
 
 fun checkWithVarArgs(a: Array<String>) {
     // specify each parameter:
-    withVarArgs("a", "b", "c")
+    withVarArgs("a", "b", "classes.getC")
     // unpack an array with spread operator (*):
     withVarArgs(*a)
 }

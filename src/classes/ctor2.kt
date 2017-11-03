@@ -1,3 +1,5 @@
+package classes
+
 // no primary constructor, two secondary constructors
 open class Player {
     constructor(name: String) {

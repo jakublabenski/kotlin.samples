@@ -1,9 +1,11 @@
+package classes
+
 class Simple
 
 fun checkSimple() {
     var s = Simple()
 
-    println("checkSimple")
+    println("classes.checkSimple")
     println(s.toString())
     println(s.hashCode())
     println(s.equals(s))
@@ -15,7 +17,7 @@ fun checkAB() {
     var a = SimpleAB(1, 2)
     var b = SimpleAB(1, 2)
 
-    println("\ncheckAB")
+    println("\nclasses.checkAB")
     println("a == b " + (a == b))
     println("a.equals(b) " + a.equals(b))
     println("a === b " + (a === b))

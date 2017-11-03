@@ -1,3 +1,5 @@
+package classes
+
 object Singleton {
     val name: String = "Name"
 }
@@ -6,7 +8,7 @@ fun singletonCheck() {
     var s = Singleton.name
 }
 
-// Internal object can act like static members in Java
+// classes.Internal object can act like static members in Java
 data class Parent(val name: String) {
     object StaticPretender {
         val likeStaticField: String = "Name"
@@ -21,7 +23,7 @@ fun parentCheck() {
 }
 
 
-// Internal object can act like friends
+// classes.Internal object can act like friends
 data class ClassWithFriend(val name: String) {
     companion object FriendPretender {
         val likeStaticField: String = "Name"
@@ -34,11 +36,11 @@ data class ClassWithFriend(val name: String) {
 }
 
 fun classWithFriendCheck() {
-    var s = ClassWithFriend.FriendPretender.likeStaticField
-    var i = ClassWithFriend.FriendPretender.likeStatic(ClassWithFriend("abc"))
+    var s = ClassWithFriend.likeStaticField
+    var i = ClassWithFriend.likeStatic(ClassWithFriend("abc"))
 }
 
-// Internal object has no name
+// classes.Internal object has no name
 data class ClassWithAnonymousFriend(val name: String) {
     // anonymous object (has to be member of a class)
     // There can be only one in a class
@@ -61,7 +63,7 @@ class IHaveFactory private constructor(val what: String) {
 
 // extension function for companion object
 fun IHaveFactory.Companion.createUnnamed(): IHaveFactory {
-    return IHaveFactory.create("Unnamed")
+    return create("Unnamed")
 }
 
 fun iHaveFactoryCheck() {
