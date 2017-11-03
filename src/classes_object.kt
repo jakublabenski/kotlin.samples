@@ -41,6 +41,7 @@ fun classWithFriendCheck() {
 // Internal object has no name
 data class ClassWithAnonymousFriend(val name: String) {
     // anonymous object (has to be member of a class)
+    // There can be only one in a class
     companion object {
         val likeStaticField: String = "Name"
     }
@@ -58,7 +59,27 @@ class IHaveFactory private constructor(val what: String) {
     }
 }
 
+// extension function for companion object
+fun IHaveFactory.Companion.createUnnamed(): IHaveFactory {
+    return IHaveFactory.create("Unnamed")
+}
+
 fun iHaveFactoryCheck() {
     val v = IHaveFactory.createDefault()
 }
 
+// anonymous objects
+interface WithCall {
+    fun call()
+}
+
+fun needsCall(v: WithCall) {
+
+}
+
+fun call() {
+    // anonymous object created:
+    needsCall(object : WithCall {
+        override fun call() {}
+    })
+}
