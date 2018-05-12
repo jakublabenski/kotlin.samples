@@ -1,9 +1,11 @@
-fun test(arg: Int): Int {
-    // value initialized instantly:
-    val str1: String = "abc"
-    // value with delayed initialization
-    val str2: String
+package basics
 
+fun test(arg: Int): Int {
+    // constant initialized instantly:
+    val str1: String = "abc"
+
+    // constant with delayed initialization
+    val str2: String
     if (arg > 0) {
         str2 = "x1"
     } else {

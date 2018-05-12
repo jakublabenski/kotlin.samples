@@ -1,3 +1,5 @@
+package basics
+
 enum class Colors(val red: Int, val green: Int, val blue: Int) {
     RED(255, 0, 0), GREEN(0, 255, 0), BLUE(0, 0, 255),
     WHITE(255, 255, 255), BLACK(0, 0, 0);
@@ -9,7 +11,7 @@ fun Colors.str(): String {
     when (this) {
         Colors.RED -> "red"
         Colors.GREEN -> "green"
-        Colors.BLUE -> "blue"
+        Colors.BLUE, Colors.WHITE -> "blue"
     }
     return "other"
 }
@@ -27,6 +29,7 @@ fun Colors.int(): Int {
         (red > blue) && (red > green) -> 1
         (red < blue) && (red > green) -> 2
         (red == blue) && (red == green) -> 3
+        // default in C++, 'else' in Kotlin:
         else -> 0
     }
     return 3

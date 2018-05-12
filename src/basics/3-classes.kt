@@ -1,4 +1,25 @@
-package classes
+package basics
+
+class Person1(val name: String)
+
+val p = Person1("test")
+val n = p.name
+
+class Person2(
+        // read-only property with backing field and trivial getter
+        val name: String,
+        // writabl property with backing field, a getter and setter
+        var isMarried: Boolean
+)
+
+class Rectangle(val height: Int, val width: Int) {
+    val isSquare: Boolean
+        // Property getter declaration
+        get() {
+            return height == width
+        }
+}
+
 
 // accessing backing field from its accessors
 class NameAddress(val name: String) {
@@ -10,7 +31,7 @@ class NameAddress(val name: String) {
         }
 
     var street: String = "unknown"
-            // limiting accessor visibility, cannot be used outsize of class
+    // limiting accessor visibility, cannot be used outsize of class
         private set
 }
 

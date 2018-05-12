@@ -3,7 +3,7 @@ package classes
 // public by default, visible everywhere
 class PublicByDefault {}
 
-// visiable in a file:
+// visible in a file:
 private class Private {}
 
 // visible in a module:

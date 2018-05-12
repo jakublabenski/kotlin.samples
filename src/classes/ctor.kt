@@ -7,7 +7,7 @@ class User1(var name: String)
 // primary constructor with explicit constructor keyword
 class User2 constructor(val name: String, var id: Int = -1)
 
-// primary constructor with explicit constructor keyword
+// primary constructor without explicit constructor keyword
 class User3(_name: String) {
     var name = _name
 }

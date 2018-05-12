@@ -1,10 +1,12 @@
+package basics
+
 val multiLine = """line 1
 line 2
 line 3
 """
 
 val test = "extra: $multiLine"
-val test2 = "extra: ${test}"
+val test2 = "extra: $test"
 
 val test3 = arrayOf(1, 2, 3, 4, 5)
 val test4 = "${test3[1] + 4}"
