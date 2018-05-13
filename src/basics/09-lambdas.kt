@@ -14,12 +14,10 @@ fun callback(str: String, id: Int,
 fun main(args: Array<String>) {
     // direct call:
     { println("test1") }()
-    // use library function 'run':
-    run { println("basics.getTest2") }
-
-    println(callback("abc", 1, { str, id ->
+    // pass to a function:
+    callback("abc", 1, { str, id ->
         str[id]
-    }))
+    })
 
     class Person9(var name : String, var age : Int)
     val people = listOf(Person9("Alice", 29),
