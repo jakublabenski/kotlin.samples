@@ -20,4 +20,20 @@ fun main(args: Array<String>) {
     println(callback("abc", 1, { str, id ->
         str[id]
     }))
+
+    class Person(var name : String, var age : Int)
+    val people = listOf(Person("Alice", 29), Person("Bob", 31))
+
+    people.maxBy({ p: Person -> p.age })
+    people.maxBy() { p: Person -> p.age }
+    people.maxBy { p: Person -> p.age }
+    // When accessing one property:
+    people.maxBy { it.age }
+    // When accessing one property:
+    people.maxBy(Person::age)
+
+
+    var outside : Int = 1
+    people.maxBy { p: Person -> p.age + outside}
+
 }

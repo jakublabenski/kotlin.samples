@@ -10,7 +10,7 @@ private class Private {}
 internal class Internal {}
 
 open class C {
-    // public bu default, visible everywhere
+    // public by default, visible everywhere
     fun publicF() {}
 
     // visible in a class

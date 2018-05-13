@@ -14,3 +14,6 @@ val boolean : Boolean = false;
 // arrays
 // enums
 // classes
+
+var like_void : Unit = Unit
+var like_object : Any = like_void

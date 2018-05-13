@@ -10,12 +10,12 @@ open class Player {
 }
 
 class SuperPlayer : Player {
-    constructor(id: Int, name: String)
+    constructor(extra : Int, id: Int, name: String)
             : super(id, name) {
     }
 
     constructor(name: String)
-            : this(-1, name) {
+            : this(-1, -1, name) {
     }
 }
 

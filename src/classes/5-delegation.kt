@@ -1,7 +1,7 @@
 package classes
 
 // Collection delegation
-class MyString(private val inner: Collection<String> = ArrayList<String>())
+class MyString(private val inner: Collection<String>)
     : Collection<String> by inner {
 
     override fun contains(element: String): Boolean {
